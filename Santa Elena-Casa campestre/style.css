@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(175, 109, 30);
+}
+
+.header { 
+    width: 100%;
+    background-color: white; /* Se necesita un fondo para ver la sombra */
+    box-shadow: 
+        rgba(38, 57, 77, 0.7) 0px 20px 30px -10px,
+        rgba(0, 0, 0, 0.2) 0px 10px 15px -5px;
+    height: 130px;
+    position: relative; /* Para que la imagen se posicione dentro */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+        position: absolute;
+        top: -90px;
+        left: -60px;
+        width: 300px; /* Ajusta el tamaño según necesites */
+        height: auto;
+    }
+
+    nav {
+        height: 100%;
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        ul {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            li {
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+                    color: rgb(102, 102, 102);
+                    transition: all .3s linear;
+                    font-size: 20px;
+
+                    &:hover {
+                        color: rgb(134, 139, 59);
+                    }
+                }
+            }
+        }
+    }
+}
+video {
+    position: absolute;
+    top: 63.09%;
+    left: 50%;
+    transform: translate(-139%, -50%);
+}
