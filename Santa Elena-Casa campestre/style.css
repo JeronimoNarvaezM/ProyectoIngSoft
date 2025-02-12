@@ -6,27 +6,42 @@
 
 body {
     background-color: rgb(175, 109, 30);
+    padding-top: 140px;
+}
+h2 {
+    margin-bottom: 50px; /*ESPACIO ENTRE ELLOS*/
+}
+p{
+    margin-bottom: 50px; /*ESPACIO ENTRE ELLOS*/
 }
 
 .header { 
     width: 100%;
-    background-color: white; /* Se necesita un fondo para ver la sombra */
+    top: 0; /*LO MANTIENE EN LA PARTE SUPERIOR*/
+    left: 0;
+    background-color: white; /*NECESITAMOS EL FONDO PARA VER LA SOMBRA*/
     box-shadow: 
         rgba(38, 57, 77, 0.7) 0px 20px 30px -10px,
         rgba(0, 0, 0, 0.2) 0px 10px 15px -5px;
     height: 130px;
-    position: relative; /* Para que la imagen se posicione dentro */
+    position: fixed; /*PARA QUE LA IMAGEN SE POSICIONE DENTRO*/
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1000;
+    height: 130px; /*TAMAÑO ORIGINAL*/
+    transition: all 0.3s ease-in-out; /*TRANSICION */
+    
 
     .logo {
         position: absolute;
         top: -90px;
-        left: -60px;
-        width: 300px; /* Ajusta el tamaño según necesites */
+        left: -50px;
+        width: 300px; /*TAMAÑO DEL LOGO*/
         height: auto;
+        transition: all 0.3s ease-in-out;
     }
+    
 
     nav {
         height: 100%;
@@ -60,9 +75,133 @@ body {
         }
     }
 }
+.header.shrink {
+    height: 80px; /*REDUCCIÓN DE TAMAÑO*/
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 10px;
+}
+.header.shrink .logo {
+    width: 200px; /*TAMAÑO REDUCIDO DEL LOGO*/
+    top: -70px; /* AJUSTA LA POSICION DEL LOGO CUANDO SE REDUCE */
+}
+
+/* REDUCE EL TAMAÑO DEL TEXTO DEL HEADER */
+.header.shrink nav ul li a {
+    font-size: 16px; /*TAMAÑO REDUCIDO*/
+}
+.contenedor {
+    display: flex;  
+    margin-left: 500px;/*DISTANCIA ENTRE EL VIDEO Y EL CONTENEDOR*/
+    padding: 70px; /*DISTANCIA ENTRE EL HEADER Y EL CONTENEDOR*/
+    transform: scale(1.18);
+}
 video {
     position: absolute;
-    top: 63.09%;
-    left: 50%;
-    transform: translate(-139%, -50%);
+    top: 60%; /*ARRIBA - ABAJO*/
+    left: 46%; /*MUEVE DE IZQUIERDA A DERECHA*/
+    transform: translate(-139%, -49.5%);
 }
+.descripcion {
+    max-width: 800px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    line-height: 1.5; /*ESPACIO ENTRE LINEAS*/
+    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    padding: 50px;
+    border-radius: 20px; /*BORDE CURVO DEL CONTENEDOR*/
+}
+
+.galeria {
+    display: flex; /*USAMOS FLEXBOX EL CUAL SERA COMO TENER TODAS LAS FOTOS SEGUIDAS*/
+    justify-content: space-between; /*ESPACIO ENTRE IMAGENES*/
+    margin: 100px auto; /*ESPACIO ENTRE LA PARTE DE ARRIBA Y LA DE ABAJO*/
+    max-width: 80%; /*ANCHO DE LAS IMAGENES*/
+}
+
+.galeria img {
+    width: 320px; /*TAMAÑO DE LAS IMAGENES*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /*SOMBRA DE LAS IMAGENES*/
+}
+
+.imagen-container {
+    position: relative; /*SOBRE PONE EL TEXTO DE LA IMAGEN*/
+    border-radius: 10px;
+}
+
+.imagen-container img {
+    width: 320px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.imagen-container:hover img {
+    transform: scale(1.1); /*ZOOM DE LA IMAGEN*/
+    filter: brightness(0.3); /*OSCURECE LA IMAGEN*/
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.3s ease;
+}
+
+.imagen-container:hover .overlay {
+    opacity: 1; /*MUESTRA EL TEXTO DE LA IMAGEN*/
+}
+
+.footer {
+    background-color: #222; /* Fondo oscuro */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    position: relative;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.footer-logo {
+    position: absolute;
+    bottom: 10px; /*SUBE*/
+    left: -150px; /*IZQUIERDA A DERECHA O VICEVERSA*/
+}
+
+.footer-logo img {
+    width: 400px; /* TAMAÑO LOGO */
+    height: auto;
+}
+
+.info {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
