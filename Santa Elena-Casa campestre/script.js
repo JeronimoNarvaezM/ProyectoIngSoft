@@ -1,4 +1,4 @@
-alert("This is my Js")
+
 window.addEventListener("scroll", function () {
     let header = document.querySelector(".header");
     let logo = document.querySelector(".logo");

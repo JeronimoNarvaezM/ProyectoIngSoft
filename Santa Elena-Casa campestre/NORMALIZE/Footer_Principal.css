@@ -1,0 +1,47 @@
+.footer {
+    background-color: #222; /* Fondo oscuro */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    position: relative;
+
+    .footer-container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    .footer-logo {
+        position: absolute;
+        bottom: 3rem; /*SUBE*/
+        left: -2.5rem; /*IZQUIERDA A DERECHA O VICEVERSA*/
+    }
+    .footer-logo img {
+        width: 200px; /* TAMAÑO LOGO */
+        height: auto;
+    }
+    .info {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    
+    .social {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .social-icon img {
+        width: 30px;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+    
+    .social-icon img:hover {
+        transform: scale(1.1);
+    }
+}

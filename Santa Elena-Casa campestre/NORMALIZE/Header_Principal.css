@@ -1,0 +1,86 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(175, 109, 30);
+    padding-top: 140px;
+}
+h2 {
+    margin-bottom: 50px; /*ESPACIO ENTRE ELLOS*/
+}
+p{
+    margin-bottom: 50px; /*ESPACIO ENTRE ELLOS*/
+}
+
+.header { 
+    width: 100%;
+    position: fixed; /* PARA QUE LA IMAGEN SE POSICIONE DENTRO */
+    top: 0; /* LO MANTIENE EN LA PARTE SUPERIOR */
+    left: 0;
+    background-color: white; /* NECESITAMOS EL FONDO PARA VER LA SOMBRA */
+    box-shadow: 
+        rgba(38, 57, 77, 0.7) 0px 20px 30px -10px,
+        rgba(0, 0, 0, 0.2) 0px 10px 15px -5px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out; /* TRANSICIÓN */
+
+    nav {
+        height: 100%;
+        width: 100%;
+        max-width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        ul {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            li {
+                list-style: none;
+                
+                img {
+                    width: 130px;
+                    height: 130px;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: rgb(102, 102, 102);
+                    transition: all .3s linear;
+                    font-size: 20px;
+
+                    &:hover {
+                        color: rgb(134, 139, 59);
+                    }
+                }
+            }
+        }
+    }
+
+    &.shrink {
+        height: 80px; /* REDUCCIÓN DE TAMAÑO */
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 10px;
+
+        nav ul li img {
+            width: 100px; /* REDUCCIÓN DEL LOGO */
+            height: 100px;
+        }
+
+        nav ul li a {
+            font-size: 16px; /* TAMAÑO REDUCIDO DEL TEXTO */
+        }
+    }
+}
