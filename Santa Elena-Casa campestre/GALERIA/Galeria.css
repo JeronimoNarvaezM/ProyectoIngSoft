@@ -1,0 +1,21 @@
+body{
+    background-color:rgb(175, 109, 30);
+}
+.galeria{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 10px;
+    max-width: 90%;
+    margin: 50px auto;
+    img{
+        width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    }
+}
