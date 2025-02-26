@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(175, 109, 30);
+    font-family: 'Unna', serif;
+}
+
+.contenedor-mapa {
+   /*width: 100vw;   Ocupa todo el ancho de la pantalla */
+    max-height: 400px; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-mapa img {
+    min-width: fit-content;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+}
+
+
+

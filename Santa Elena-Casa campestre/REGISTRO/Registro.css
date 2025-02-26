@@ -1,5 +1,7 @@
 body{
     background-color:rgb(175, 109, 30);
+    font-family: 'Unna', serif;
+
 }
 .general {
     display: flex;

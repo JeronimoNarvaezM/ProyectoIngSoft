@@ -20,3 +20,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    Swal.fire({
+        title: "Bienvenido",
+        text: "Bienvenido al REGISTRO",
+        icon: "success",
+        confirmButtonText: "Aceptar"
+    });
+});
