@@ -1,5 +1,7 @@
 body{
     background-color:rgb(175, 109, 30);
+    font-family: 'Unna', serif;
+
 }
 .galeria{
     display: flex;
@@ -18,4 +20,14 @@ body{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, filter 0.3s ease;
     }
+}
+.galeria img {
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* Efecto al pasar el mouse */
+.galeria img:hover {
+    transform: scale(1.05);
 }
