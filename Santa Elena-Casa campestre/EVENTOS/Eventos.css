@@ -1,5 +1,7 @@
 body{
     background-color:rgb(175, 109, 30);
+    font-family: 'Unna', serif;
+
 }
 .contenedor {
     display: flex;
@@ -38,7 +40,7 @@ body{
 }
 
 .btn-reservar {
-    background-color:  rgb(134, 139, 59); 
+    background-color:  rgb(134, 139, 59); /* Color llamativo */
     color: #333;
     font-size: 18px;
     padding: 15px 30px;
